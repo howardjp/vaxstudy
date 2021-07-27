@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export FRED_HOME=$HOME/prj/vax/FRED
-export PATH=$FRED_HOME/bin:$PATH
-
 echo -n 'simulations started '
 date
 
@@ -28,7 +25,6 @@ for i in $list_of_vax_uptake; do
             JOBNAME=vaxtest-$i-$j-$k
             echo fred_job -k $JOBNAME -n 1 -m 1 -p config.fred
             fred_job -k $JOBNAME -n 1 -m 1 -p config.fred
-            done
         done
     done
 done
