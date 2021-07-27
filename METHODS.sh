@@ -19,8 +19,9 @@ for i in $list_of_vax_uptake; do
         for k in $list_of_trans; do
             echo "TRANSMISSIBILITY=$k m4 covid19.m4 > covid19.fred"
             TRANSMISSIBILITY=$k m4 covid19.m4 > covid19.fred
-            echo "m4 config.m4 > config.fred"
-            m4 config.m4 > config.fred
+            x=$RANDOM
+            echo "SEED=$x m4 config.m4 > config.fred"
+            SEED=$x m4 config.m4 > config.fred
             # FRED job with n runs on m cores
             JOBNAME=vaxtest-$i-$j-$k
             echo fred_job -k $JOBNAME -n 1 -m 1 -p config.fred
