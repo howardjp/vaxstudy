@@ -15,7 +15,7 @@ locations = Butler_County_OH
 
 ##### Simulated Timeframe
 start_date = 2018-Oct-01
-end_date = 2018-Dec-31
+end_date = 2019-Sep-30
 
 ##### Output Options
 enable_health_records = 0
